@@ -1,7 +1,7 @@
 package fr.iutvalence.info.dut.m3105.pattern.state;
 
 
-public class TrafficSignal extends Thread implements TrafficSignalContext, TrafficSignalUserInterface
+public class TrafficSignal extends Thread implements ChangeColorObserver,TrafficSignalContext, TrafficSignalUserInterface
 {
 	private TrafficSignalState state;
 
@@ -33,6 +33,13 @@ public class TrafficSignal extends Thread implements TrafficSignalContext, Traff
 				break;
 			}
 		}
+	}
+
+	@Override
+	public void changeColor(TrafficSignalStateName Color) 
+	{
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
